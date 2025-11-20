@@ -160,7 +160,7 @@ rules:
     policy: DIRECT
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list"
-    policy: TELEGRAM
+    policy: Telegram
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list"
     policy: YouTube
