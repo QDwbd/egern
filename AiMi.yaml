@@ -1,7 +1,13 @@
-vif_only: true
+auto_update:
+  url: https://raw.githubusercontent.com/QDwbd/egern/main/AiMi.yaml
+  interval: 86400
+socks_port: 3090
+ipv6: false
+allow_external_connections: false
+vif_only: false
 geoip_db_url: https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
 asn_db_url: https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb
-proxy_latency_test_url: https://www.apple.com/library/test/success.html
+proxy_latency_test_url: http://www.gstatic.com/generate_204
 compat_route: true
 dns:
   upstreams:
