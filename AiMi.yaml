@@ -26,7 +26,7 @@ dns:
       value: Global DNS
 policy_groups:
 - external:
-    name: 订阅
+    name: PROXY
     type: select
     urls:
     - 机场订阅地址
