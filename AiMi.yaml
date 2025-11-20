@@ -45,6 +45,97 @@ policy_groups:
     flatten: true
     icon: https://iili.io/KLr8Sne.png
     hidden: false
+- select:
+    name: YouTube
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: Netflix
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: Disney
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: HBO
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: TikTok
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: Spotify
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: PayPal
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: Twitter
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: Facebook
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: Amazon
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: 谷歌服务
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: 游戏平台
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
+- select:
+    name: 微软服务
+    policies:
+    - PROXY
+    flatten: true
+    icon: https://iili.io/KLr8Sne.png
+    hidden: false
 rules:
 - domain_keyword:
     match: 18comic
@@ -72,52 +163,52 @@ rules:
     policy: TELEGRAM
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list"
-    policy: PROXY
+    policy: YouTube
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list"
-    policy: PROXY
+    policy: Netflix
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list"
-    policy: PROXY
+    policy: Disney
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list"
-    policy: PROXY
+    policy: HBO
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list"
-    policy: PROXY
+    policy: TikTok
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list"
-    policy: PROXY
+    policy: Spotify
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/PayPal/PayPal.list"
-    policy: PROXY
+    policy: PayPal
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list"
-    policy: PROXY
+    policy: Twitter
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list"
-    policy: PROXY
+    policy: Facebook
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Amazon/Amazon.list"
-    policy: PROXY
+    policy: Amazon
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list"
-    policy: PROXY
+    policy: 谷歌服务
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Sony/Sony.list"
-    policy: PROXY
+    policy: 游戏平台
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list"
-    policy: PROXY
+    policy: 游戏平台
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list"
-    policy: PROXY
+    policy: 游戏平台
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list"
-    policy: PROXY
+    policy: 游戏平台
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list"
-    policy: PROXY
+    policy: 微软服务
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/SteamCN/SteamCN.list"
     policy: DIRECT
