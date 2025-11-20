@@ -49,7 +49,7 @@ policy_groups:
 rules:
 - domain_keyword:
     match: 18comic
-    policy: Proxy
+    policy: PROXY
 - rule_set:
     match: "https://raw.githubusercontent.com/QDwbd/srule/main/manhua.list"
     policy: REJECT
@@ -59,14 +59,8 @@ rules:
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list"
     policy: DIRECT
-- domain_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax_Domain.list"
-    policy: DIRECT
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list"
-    policy: DIRECT
-- domain_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple_Domain.list"
     policy: DIRECT
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AppleID/AppleID.list"
@@ -130,13 +124,13 @@ rules:
     policy: DIRECT
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list"
-    policy: Proxy
+    policy: PROXY
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list"
-    policy: Proxy
+    policy: PROXY
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global.list"
-    policy: Proxy
+    policy: PROXY
 - rule_set:
     match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Lan/Lan.list"
     policy: DIRECT
