@@ -47,7 +47,6 @@ policy_groups:
     icon: https://iili.io/KLr8Sne.png
     hidden: false
 rules:
-rules:
 - domain_keyword:
     match: 18comic
     policy: Proxy
