@@ -1,8 +1,9 @@
+# 自用
 auto_update:
   url: https://raw.githubusercontent.com/QDwbd/egern/main/AiMi.yaml
-  interval: 86400
-socks_port: 3090
+  interval: 21600
 ipv6: false
+socks_port: 3090
 allow_external_connections: false
 vif_only: false
 geoip_db_url: https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
@@ -28,201 +29,200 @@ policy_groups:
 - external:
     name: PROXY
     type: select
-    urls:
-    - 机场订阅地址
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko21.png
     hidden: false
 - select:
     name: Telegram
     policies:
-      - HKL
+    - HKL
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko1.png
     hidden: false
 - select:
     name: AI
     policies:
-      - DE
+    - DE
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko32.png
     hidden: false
 - select:
     name: YouTube
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko31.png
     hidden: false
 - select:
     name: Netflix
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko30.png
     hidden: false
 - select:
     name: Disney
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko29.png
     hidden: false
 - select:
     name: HBO
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko28.png
     hidden: false
 - select:
     name: TikTok
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko2.png
     hidden: false
 - select:
     name: Spotify
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko3.png
     hidden: false
 - select:
     name: PayPal
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko4.png
     hidden: false
 - select:
     name: Twitter
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko7.png
     hidden: false
 - select:
     name: Facebook
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko6.png
     hidden: false
 - select:
     name: Amazon
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko9.png
     hidden: false
 - select:
     name: 谷歌服务
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko11.png
     hidden: false
 - select:
     name: 游戏平台
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko16.png
     hidden: false
 - select:
     name: 微软服务
     policies:
     - PROXY
     flatten: true
-    icon: https://iili.io/KLr8Sne.png
+    icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko18.png
     hidden: false
 rules:
 - domain_keyword:
     match: 18comic
     policy: PROXY
 - rule_set:
-    match: "https://raw.githubusercontent.com/QDwbd/srule/main/manhua.list"
+    match: https://raw.githubusercontent.com/QDwbd/srule/main/manhua.list
     policy: REJECT
 - rule_set:
-    match: "https://raw.githubusercontent.com/QDwbd/srule/refs/heads/main/ai.list"
+    match: https://raw.githubusercontent.com/QDwbd/srule/refs/heads/main/ai.list
     policy: AI
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMax/ChinaMax.list
     policy: DIRECT
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Apple/Apple.list
     policy: DIRECT
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AppleID/AppleID.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AppleID/AppleID.list
     policy: DIRECT
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list
     policy: DIRECT
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Telegram/Telegram.list
     policy: Telegram
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list
     policy: YouTube
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Netflix/Netflix.list
     policy: Netflix
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Disney/Disney.list
     policy: Disney
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/HBO/HBO.list
     policy: HBO
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/TikTok/TikTok.list
     policy: TikTok
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Spotify/Spotify.list
     policy: Spotify
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/PayPal/PayPal.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/PayPal/PayPal.list
     policy: PayPal
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Twitter/Twitter.list
     policy: Twitter
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Facebook/Facebook.list
     policy: Facebook
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Amazon/Amazon.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Amazon/Amazon.list
     policy: Amazon
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Google/Google.list
     policy: 谷歌服务
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Sony/Sony.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Sony/Sony.list
     policy: 游戏平台
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Nintendo/Nintendo.list
     policy: 游戏平台
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Epic/Epic.list
     policy: 游戏平台
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Game/Game.list
     policy: 游戏平台
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Microsoft/Microsoft.list
     policy: 微软服务
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/SteamCN/SteamCN.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/SteamCN/SteamCN.list
     policy: DIRECT
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Steam/Steam.list
     policy: PROXY
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/GitHub/GitHub.list
     policy: PROXY
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Global/Global.list
     policy: PROXY
 - rule_set:
-    match: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Lan/Lan.list"
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Lan/Lan.list
     policy: DIRECT
 - ip_cidr:
     match: 192.168.0.0/16
@@ -271,8 +271,6 @@ modules:
 - url: https://whatshub.top/sgmodule/crypto.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/obs1379/Egern/refs/heads/main/surge.qingr.moe_for_Egern.sgmodule
-  enabled: true
-- url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E2%AD%90%EF%B8%8F%20BoxJs.official.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E2%AD%90%EF%B8%8F%20Sub-Store.official.sgmodule
   enabled: true
