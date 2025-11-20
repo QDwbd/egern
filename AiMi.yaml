@@ -19,16 +19,9 @@ dns:
       match: '*'
       value: Global DNS
 policy_groups:
-- select:
-    name: PROXY
-    policies:
-    - 订阅
-    flatten: true
-    icon: https://iili.io/KLr8Sne.png
-    hidden: false
 - external:
     name: 订阅
-    type: fallback
+    type: select
     urls:
     - 机场订阅地址
     hidden: true
