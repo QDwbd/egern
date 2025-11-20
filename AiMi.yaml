@@ -30,7 +30,7 @@ policy_groups:
     type: select
     urls:
     - 机场订阅地址
-    hidden: true
+    hidden: false
 - select:
     name: Telegram
     policies:
