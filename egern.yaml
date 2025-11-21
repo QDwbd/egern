@@ -1,3 +1,7 @@
+#auto_update:
+#  url: https://raw.githubusercontent.com/QDwbd/egern/main/AiMi.yaml
+#  interval: 21600
+#自动更新要关了。。不然每天醒来就没节点了。。
 ipv6: false
 socks_port: 3090
 allow_external_connections: false
@@ -25,6 +29,8 @@ policy_groups:
 - external:
     name: PROXY
     type: select
+    urls:
+    - 这里填订阅链接
     icon: https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/Nezuko/Nezuko21.png
     hidden: false
 - select:
