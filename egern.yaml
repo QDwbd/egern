@@ -1,6 +1,3 @@
-auto_update:
-  url: https://raw.githubusercontent.com/QDwbd/egern/main/egern.yaml
-  interval: 21600
 ipv6: false
 socks_port: 3090
 allow_external_connections: false
