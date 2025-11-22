@@ -1,7 +1,7 @@
 # 自用
-auto_update:
-  url: https://raw.githubusercontent.com/QDwbd/egern/main/AiMi.yaml
-  interval: 21600
+#auto_update:
+  #url: https://raw.githubusercontent.com/QDwbd/egern/main/AiMi.yaml
+  #interval: 21600
 ipv6: false
 socks_port: 3090
 allow_external_connections: false
@@ -255,6 +255,10 @@ rules:
     disabled: false
 - default:
     policy: PROXY
+url_rewrites:
+- match: (.*google)\.cn
+  location: $1.com
+  status_code: 302
 mitm:
   enabled: true
   ca_p12: egern.p12
