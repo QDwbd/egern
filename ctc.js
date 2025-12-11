@@ -517,8 +517,12 @@ $done({
   content: 
     `📅 公历: ${nowsolar}\n` +
     `🌙 农历: ${lunar.IMonthCn}${lunar.IDayCn} (${lunar.gzYear}年, ${lunar.Animal}年)\n` +
-    `⛩ 节气: ${lunar.Term || '无'}\n` +
-    `🎉 ${tlist[nowlist][0]}: ${today(tnumcount(Number(nowlist)))}\n` +
+    `⛩ 节气: ${lunar.isTerm ? lunar.Term : '无'}\n` +
+    `🎊 公历节日: ${lunar.festival || '无'}\n` +
+    `🧧 农历节日: ${lunar.lunarFestival || '无'}\n` +
+    `🎉 今日节日: ${tlist[nowlist][0]} ${today(tnumcount(Number(nowlist)))}\n` +
     `⏳ ${tlist[Number(nowlist) + 1][0]}: ${tnumcount(Number(nowlist) + 1)}天\n` +
-    `⏳ ${tlist[Number(nowlist) + 2][0]}: ${tnumcount(Number(nowlist) + 2)}天`
+    `⏳ ${tlist[Number(nowlist) + 2][0]}: ${tnumcount(Number(nowlist) + 2)}天\n` +
+    `📆 星期: ${lunar.ncWeek}\n` +
+    `♈ 星座: ${lunar.astro}`
 })
