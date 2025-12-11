@@ -271,9 +271,9 @@ modules:
   enabled: true
 - url: https://whatshub.top/sgmodule/crypto.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/obs1379/Egern/refs/heads/main/surge.qingr.moe_for_Egern.sgmodule
+  - url: https://raw.githubusercontent.com/QDwbd/egern/refs/heads/main/tc.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Timecard/Moore/Timecard.sgmodule
+- url: https://raw.githubusercontent.com/obs1379/Egern/refs/heads/main/surge.qingr.moe_for_Egern.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/Net_Speed/Net_Speed.sgmodule
   enabled: true
