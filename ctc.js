@@ -521,6 +521,6 @@ $done({
     `⛩ 节气: ${lunar.isTerm ? lunar.Term : '无'}\n` +
     `🌸 公历节日: ${lunar.festival || '无'}\n` +
     `🀄️ 农历节日: ${lunar.lunarFestival || '无'}\n` +
-    `🌕 ${tlist[nowlist][0]} ${today(tnumcount(Number(nowlist)))}\n` +
+    `🌕 ${tlist[nowlist][0]}: ${today(tnumcount(Number(nowlist)))}\n` +
     `🌑 ${tlist[Number(nowlist) + 1][0]}: ${tnumcount(Number(nowlist) + 1)}天\n`
 })
