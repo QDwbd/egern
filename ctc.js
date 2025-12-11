@@ -88,21 +88,8 @@ function icon_now(num){
   }
 }
 
-/**
- * @charset UTF-8
- * @Author  Jea杨(JJonline@JJonline.Cn)
- * @Time    2014-7-21
- * @Time    2016-8-13 Fixed 2033hex、Attribution Annals
- * @Time    2016-9-25 Fixed lunar LeapMonth Param Bug
- * @Time    2017-7-24 Fixed use getTerm Func Param Error.use solar year,NOT lunar year
- * @Version 1.0.3
- */
 const calendar = {
 
-    /**
-     * @Array Of Property
-     * @return Hex
-     */
     lunarInfo: [0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2,//1900-1909
         0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977,//1910-1919
         0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970,//1920-1929
