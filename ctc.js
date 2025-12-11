@@ -512,7 +512,13 @@ function title_random(num){
   return num==0?"节日快乐，万事大吉":dic[r]
 }
 $done({
-title:title_random(tnumcount(Number(nowlist))),
-icon:icon_now(tnumcount(Number(nowlist))),
-content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+","+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
+  title: title_random(tnumcount(Number(nowlist))),
+  icon: icon_now(tnumcount(Number(nowlist))),
+  content: 
+    `📅 公历: ${nowsolar}\n` +
+    `🌙 农历: ${lunar.IMonthCn}${lunar.IDayCn} (${lunar.gzYear}年, ${lunar.Animal}年)\n` +
+    `⛩ 节气: ${lunar.Term || '无'}\n` +
+    `🎉 ${tlist[nowlist][0]}: ${today(tnumcount(Number(nowlist)))}\n` +
+    `⏳ ${tlist[Number(nowlist) + 1][0]}: ${tnumcount(Number(nowlist) + 1)}天\n` +
+    `⏳ ${tlist[Number(nowlist) + 2][0]}: ${tnumcount(Number(nowlist) + 2)}天`
 })
