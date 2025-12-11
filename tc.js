@@ -770,7 +770,7 @@ var nowlunar = lunar.IMonthCn+lunar.IDayCn+' '+lunar.gzYear+lunar.gzMonth+lunar.
 function title_random(num){
   let r = Math.floor((Math.random()*20)+1);
   let dic = {
-    1: "人生如梦，岂能少食？",
+    1: "人生如梦,岂能少食？",
     2: "不觉晓风吹,归期近矣",
     3: "倦眼看天际,欲食不觉心",
     4: "今夕何夕,月光如洗,心有千重志",
