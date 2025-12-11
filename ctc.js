@@ -23,7 +23,6 @@ var tlist = {
 let tnow = new Date();
 let tnowf =
   tnow.getFullYear() + "-" + (tnow.getMonth() + 1) + "-" + tnow.getDate();
-
 function dateDiff(startDateString, endDateString) {
   var separator = "-";
   var startDates = startDateString.split(separator);
@@ -34,12 +33,10 @@ function dateDiff(startDateString, endDateString) {
     (endDate - startDate) / 1000 / 60 / 60 / 24
   ).toString();
 }
-
 function tnumcount(num) {
   let dnum = num;
   return dateDiff(tnowf, tlist[dnum][1]);
 }
-
 function now() {
   for (var i = 1; i <= Object.getOwnPropertyNames(tlist).length; i++) {
     if (Number(dateDiff(tnowf, tlist[i.toString()][1])) >= 0) {
@@ -47,7 +44,6 @@ function now() {
     }
   }
 }
-
 let nowlist = now();
 function today(day) {
   let daythis = day;
@@ -58,7 +54,6 @@ function today(day) {
     return daythis+"天";
   }
 }
-
 function datenotice() {
   if ($persistentStore.read("timecardpushed") != tlist[nowlist][1] && tnow.getHours() >= 6) {
     $persistentStore.write(tlist[nowlist][1], "timecardpushed");
@@ -66,7 +61,6 @@ function datenotice() {
   } else if ($persistentStore.read("timecardpushed") == tlist[nowlist][1]) {
   }
 }
-
 function icon_now(num){
   if(num<=7 && num>3 ){
     return "hare"
@@ -78,9 +72,7 @@ function icon_now(num){
     return "tortoise"
   }
 }
-
 const calendar = {
-
     lunarInfo: [0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2,
         0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977,
         0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970,
@@ -102,15 +94,10 @@ const calendar = {
         0x0b273, 0x06930, 0x07337, 0x06aa0, 0x0ad50, 0x14b55, 0x04b60, 0x0a570, 0x054e4, 0x0d160,
         0x0e968, 0x0d520, 0x0daa0, 0x16aa6, 0x056d0, 0x04ae0, 0x0a9d4, 0x0a2d0, 0x0d150, 0x0f252,
         0x0d520],
-
     solarMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-
     Gan: ["\u7532", "\u4e59", "\u4e19", "\u4e01", "\u620a", "\u5df1", "\u5e9a", "\u8f9b", "\u58ec", "\u7678"],
-
     Zhi: ["\u5b50", "\u4e11", "\u5bc5", "\u536f", "\u8fb0", "\u5df3", "\u5348", "\u672a", "\u7533", "\u9149", "\u620c", "\u4ea5"],
-
     Animals: ["\u9f20", "\u725b", "\u864e", "\u5154", "\u9f99", "\u86c7", "\u9a6c", "\u7f8a", "\u7334", "\u9e21", "\u72d7", "\u732a"],
-
     festival: {
         '1-1': {title: '元旦节'},
         '2-14': {title: '情人节'},
@@ -150,17 +137,13 @@ const calendar = {
     getLunarFestival() {
         return this.lFestival
     },
-
     setFestival(param = {}) {
         this.festival = param
     },
-
     setLunarFestival(param = {}) {
         this.lFestival = param
     },
-
     solarTerm: ["\u5c0f\u5bd2", "\u5927\u5bd2", "\u7acb\u6625", "\u96e8\u6c34", "\u60ca\u86f0", "\u6625\u5206", "\u6e05\u660e", "\u8c37\u96e8", "\u7acb\u590f", "\u5c0f\u6ee1", "\u8292\u79cd", "\u590f\u81f3", "\u5c0f\u6691", "\u5927\u6691", "\u7acb\u79cb", "\u5904\u6691", "\u767d\u9732", "\u79cb\u5206", "\u5bd2\u9732", "\u971c\u964d", "\u7acb\u51ac", "\u5c0f\u96ea", "\u5927\u96ea", "\u51ac\u81f3"],
-
     sTermInfo: ['9778397bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e', '97bcf97c3598082c95f8c965cc920f',
         '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa', '97b6b97bd19801ec9210c965cc920e',
         '97bcf97c359801ec95f8c965cc920f', '97bd0b06bdb0722c965ce1cfcc920f', 'b027097bd097c36b0b6fc9274c91aa',
@@ -228,14 +211,9 @@ const calendar = {
         '7f0e36665b66a449801e9808297c35', '665f67f0e37f14898082b072297c35', '7ec967f0e37f14998082b0787b06bd',
         '7f07e7f0e47f531b0723b0b6fb0721', '7f0e26665b66a449801e9808297c35', '665f67f0e37f1489801eb072297c35',
         '7ec967f0e37f14998082b0787b06bd', '7f07e7f0e47f531b0723b0b6fb0721', '7f0e27f1487f531b0b0bb0b6fb0722'],
-
-
     nStr1: ["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d", "\u4e03", "\u516b", "\u4e5d", "\u5341"],
-
     nStr2: ["\u521d", "\u5341", "\u5eff", "\u5345"],
-
     nStr3: ["\u6b63", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d", "\u4e03", "\u516b", "\u4e5d", "\u5341", "\u51ac", "\u814a"],
-
     lYearDays: function (y) {
         let i, sum = 348;
         for (i = 0x8000; i > 0x8; i >>= 1) {
@@ -243,56 +221,47 @@ const calendar = {
         }
         return (sum + this.leapDays(y));
     },
-
-    leapMonth: function (y) { //闰字编码 \u95f0
+    leapMonth: function (y) {
         return (this.lunarInfo[y - 1900] & 0xf);
     },
-
     leapDays: function (y) {
         if (this.leapMonth(y)) {
             return ((this.lunarInfo[y - 1900] & 0x10000) ? 30 : 29);
         }
         return (0);
     },
-
     monthDays: function (y, m) {
         if (m > 12 || m < 1) {
             return -1
-        }//月份参数从1至12，参数错误返回-1
+        }
         return ((this.lunarInfo[y - 1900] & (0x10000 >> m)) ? 30 : 29);
     },
-
     solarDays: function (y, m) {
         if (m > 12 || m < 1) {
             return -1
-        } //若参数错误 返回-1
+        }
         const ms = m - 1;
-        if (ms === 1) { //2月份的闰平规律测算后确认返回28或29
+        if (ms === 1) {
             return (((y % 4 === 0) && (y % 100 !== 0) || (y % 400 === 0)) ? 29 : 28);
         } else {
             return (this.solarMonth[ms]);
         }
     },
-
     toGanZhiYear: function (lYear) {
         var ganKey = (lYear - 3) % 10;
         var zhiKey = (lYear - 3) % 12;
-        if (ganKey === 0) ganKey = 10;//如果余数为0则为最后一个天干
-        if (zhiKey === 0) zhiKey = 12;//如果余数为0则为最后一个地支
+        if (ganKey === 0) ganKey = 10;
+        if (zhiKey === 0) zhiKey = 12;
         return this.Gan[ganKey - 1] + this.Zhi[zhiKey - 1];
-
     },
-
     toAstro: function (cMonth, cDay) {
         const s = "\u6469\u7faf\u6c34\u74f6\u53cc\u9c7c\u767d\u7f8a\u91d1\u725b\u53cc\u5b50\u5de8\u87f9\u72ee\u5b50\u5904\u5973\u5929\u79e4\u5929\u874e\u5c04\u624b\u6469\u7faf";
         const arr = [20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22];
-        return s.substr(cMonth * 2 - (cDay < arr[cMonth - 1] ? 2 : 0), 2) + "\u5ea7";//座
+        return s.substr(cMonth * 2 - (cDay < arr[cMonth - 1] ? 2 : 0), 2) + "\u5ea7";
     },
-
     toGanZhi: function (offset) {
         return this.Gan[offset % 10] + this.Zhi[offset % 12];
     },
-
     getTerm: function (y, n) {
         if( y < 1900 || y > 2100 || n < 1 || n > 24) {
             return -1;
@@ -310,17 +279,15 @@ const calendar = {
         }
         return parseInt(_calcDay[n - 1]);
     },
-
-    toChinaMonth: function (m) { // 月 => \u6708
+    toChinaMonth: function (m) {
         if (m > 12 || m < 1) {
             return -1
-        } //若参数错误 返回-1
+        }
         let s = this.nStr3[m - 1];
-        s += "\u6708";//加上月字
+        s += "\u6708";
         return s;
     },
-
-    toChinaDay: function (d) { //日 => \u65e5
+    toChinaDay: function (d) {
         let s;
         switch (d) {
             case 10:
@@ -338,22 +305,19 @@ const calendar = {
         }
         return (s);
     },
-
     getAnimal: function (y) {
         return this.Animals[(y - 4) % 12]
     },
-
     solar2lunar: function (yPara, mPara, dPara) {
         let y = parseInt(yPara);
         let m = parseInt(mPara);
         let d = parseInt(dPara);
         if (y < 1900 || y > 2100) {
-            return -1;// undefined转换为数字变为NaN
+            return -1;
         }
         if (y === 1900 && m === 1 && d < 31) {
             return -1;
         }
-
         let objDate;
         if (!y) {
             objDate = new Date();
@@ -373,7 +337,6 @@ const calendar = {
             offset += temp;
             i--;
         }
-
         let isTodayObj = new Date(),
             isToday = false;
         if (isTodayObj.getFullYear() === y && isTodayObj.getMonth() + 1 === m && isTodayObj.getDate() === d) {
@@ -385,16 +348,15 @@ const calendar = {
             nWeek = 7;
         }
         const year = i;
-        leap = this.leapMonth(i); //闰哪个月
+        leap = this.leapMonth(i);
         let isLeap = false;
-
         for (i = 1; i < 13 && offset > 0; i++) {
             if (leap > 0 && i === (leap + 1) && isLeap === false) {
                 --i;
                 isLeap = true;
-                temp = this.leapDays(year); //计算农历闰月天数
+                temp = this.leapDays(year);
             } else {
-                temp = this.monthDays(year, i);//计算农历普通月天数
+                temp = this.monthDays(year, i);
             }
             if (isLeap === true && i === (leap + 1)) {
                 isLeap = false;
@@ -417,15 +379,12 @@ const calendar = {
         const day = offset + 1;
         const sm = m - 1;
         const gzY = this.toGanZhiYear(year);
-
         const firstNode = this.getTerm(y, (m * 2 - 1));
         const secondNode = this.getTerm(y, (m * 2));
-
         let gzM = this.toGanZhi((y - 1900) * 12 + m + 11);
         if (d >= firstNode) {
             gzM = this.toGanZhi((y - 1900) * 12 + m + 12);
         }
-
         let isTerm = false;
         let Term = null;
         if (firstNode === d) {
@@ -439,16 +398,12 @@ const calendar = {
         const dayCyclical = Date.UTC(y, sm, 1, 0, 0, 0, 0) / 86400000 + 25567 + 10;
         const gzD = this.toGanZhi(dayCyclical + d - 1);
         const astro = this.toAstro(m, d);
-
         const solarDate = y + '-' + m + '-' + d;
         const lunarDate = year + '-' + month + '-' + day;
-
         const festival = this.festival;
         const lFestival = this.lFestival;
-
         const festivalDate = m + '-' + d;
         let lunarFestivalDate = month + '-' + day;
-
         if (month === 12 && day === 29 && this.monthDays(year, month) === 29) {
             lunarFestivalDate = '12-30';
         }
@@ -478,7 +433,6 @@ const calendar = {
             'astro': astro
         };
     },
-
     lunar2solar: function (y, m, d, isLeapMonth) {
         y = parseInt(y)
         m = parseInt(m)
@@ -501,7 +455,6 @@ const calendar = {
         if (y < 1900 || y > 2100 || d > _day) {
             return -1;
         }
-        
         let offset = 0;
         let i;
         for (i = 1900; i < y; i++) {
@@ -526,15 +479,12 @@ const calendar = {
         const cY = calObj.getUTCFullYear();
         const cM = calObj.getUTCMonth() + 1;
         const cD = calObj.getUTCDate();
-
         return this.solar2lunar(cY, cM, cD);
     }
 };
-
 var lunar = calendar.solar2lunar();
 var nowsolar = lunar.cMonth +  '月' + lunar.cDay +'日（'+lunar.astro+'）';
 var nowlunar = lunar.IMonthCn+lunar.IDayCn+' '+lunar.gzYear+lunar.gzMonth+lunar.gzDay+' '+lunar.Animal+'年';
-
 function title_random(num){
   let r = Math.floor((Math.random()*20)+1);
   let dic = {
@@ -561,7 +511,6 @@ function title_random(num){
 };
   return num==0?"节日快乐，万事大吉":dic[r]
 }
-
 $done({
 title:title_random(tnumcount(Number(nowlist))),
 icon:icon_now(tnumcount(Number(nowlist))),
